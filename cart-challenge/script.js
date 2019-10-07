@@ -9,3 +9,8 @@ function openCart() {
   if(!cart) return
   cart.id = 'cart-visible'
 }
+
+function addToCart(){
+
+}
+
