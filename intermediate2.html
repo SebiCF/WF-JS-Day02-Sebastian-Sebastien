@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+fizzBuzz()
+     function fizzBuzz() {
+    	let result = ""; 
+        for (i = 1; i < 101; i++) {
+        	let by3 = i%3
+        	let by5 = i%5
+        	if(by3 == 0 && by5 == 0){
+        		result += i + "FizzBuzz" + "<br>"
+        	}
+        	else if (by3 == 0){
+        		result += i + "Fizz" + "<br>"
+        	}
+        	else if (by5 == 0){
+        			result += i + "Buzz" + "<br>"
+        		}
+
+
+        	}
+        	document.getElementById("result").innerHTML = result;
+        }
+
+    
+    </script>
+</body>
+
+</html>
