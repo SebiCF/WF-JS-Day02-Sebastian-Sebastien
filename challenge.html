@@ -87,6 +87,11 @@ h2, .score,.btn {
   width: 100%;
   height: 100%;
   transition:all 0.4s;
+  cursor: cell;
+}
+
+.sloth-hit {
+  background-color: red;
 }
 
 .cloud.up .sloth {
@@ -158,21 +163,37 @@ h2, .score,.btn {
 		if(!sloth)
 			return
 		sloth.style.top = "100%"
+    sloth.classList.remove("sloth-hit")
 	}
 	
 	function makeSlothsClickable(){
 
-	for(sloth of document.getElementsByClassName("sloth")){	
-		sloth.addEventListener("click", function(){
-			increaseCounter()
-			for(loth of document.getElementsByClassName("sloth")){
-				loth.style.top = "100%"
-			}
+  
+    let allTheSloths = document.getElementsByClassName("sloth")
+    for(i=0;i<allTheSloths.length;i++) {
+      let sloth = allTheSloths[i]
+      sloth.addEventListener("click", function(){
+        sloth.classList.add("sloth-hit")
+        increaseCounter()
+        for(loth of document.getElementsByClassName("sloth")){
+          loth.style.top = "100%"
+        }
+      })
+    }
+    
+  //      for(sloth of document.getElementsByClassName("sloth")){	
+  //        sloth.addEventListener("click", function(){
+  //          sloth.style.backgroundColor = "red"
+  //          increaseCounter()
+  //          for(loth of document.getElementsByClassName("sloth")){
+  //            loth.style.top = "100%"
+  //          }
 
-})
+  //    })
+  //      }
+
 	}
 
-	}
 	function increaseCounter(){
 		let counter = parseInt(document.getElementsByClassName("score")[0].innerHTML) 
 		document.getElementsByClassName("score")[0].innerHTML = counter+1
