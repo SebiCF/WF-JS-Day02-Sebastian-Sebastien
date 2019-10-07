@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link type=text/css rel=stylesheet href=style.css>
+  <title></title>
+  <script src=script.js></script>
+</head>
+<body>
+  <div class=cart id=cart-invisible>
+    <div id=close>
+      <button id=close-cart>x</button>
+    </div>
+    <div id=contents>
+      <div class=item></div>
+      <div class=item></div>
+      <div class=item></div>
+      <div class=item></div>
+      <div class=item></div>
+      <div class=item></div>
+    </div>
+  </div>
+
+  <header>
+    <div class=flex>
+      <div id=logo>
+        Shopping<span style=color:red>Baggg</span>
+      </div>
+      <div id=cart-field>
+        Cart 🛒
+      </div>
+      <div id=login-field>
+        login
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kidzzz</li>
+        <li>Accessoires</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id=ad-spread>
+  </div>
+
+  <div id=products>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+    <div class=item></div>
+  </div>
+
+  <script>
+    document.getElementById("close-cart").addEventListener('click', closeCart)
+    document.getElementById("cart-field").addEventListener('click', openCart)
+  </script>
+</body>
+</html>
