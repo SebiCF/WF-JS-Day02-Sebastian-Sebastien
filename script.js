@@ -8,3 +8,8 @@ function ex1_temperature(){
 	}
 
 }
+
+function ex2_highestval(array) {
+  let highest = array.sort(function(a,b){ return b-a })[0]
+  document.getElementById("exercise2").innerHTML = `highest value: ${highest}`
+}
